@@ -1,0 +1,89 @@
+@use "./variables" as*;
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.aboutus1 {
+    color: $negro;
+}
+
+.aboutusp{
+    font-size: 200%;
+    font-family: "Jockey One", sans-serif;
+    margin-left: 10%;
+    margin-top: 60px;
+
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.galeria img{
+    width: 30%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+
+
+
+/*
+.contenedor-grid {
+    display: grid;
+    grid-template-areas:
+        "titulo titulo"
+        "img1 texto1"
+        "img2 texto2";
+
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 50px;
+    justify-items: center;
+    max-width: 1200px;
+
+    img {
+        width: 65%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .grid-titulo-1 {
+        grid-area: titulo;
+        font-size: 50px;
+    }
+
+    .grid-texto-1 {
+        grid-area: texto1;
+    }
+
+    .grid-img-1 {
+        grid-area: img1;
+    }
+
+    .grid-texto-2 {
+        grid-area: texto2;
+    }
+
+    .grid-img-2 {
+        grid-area: img2;
+    }
+
+    .grid-img-3 {
+        grid-area: img3;
+    }
+}*/

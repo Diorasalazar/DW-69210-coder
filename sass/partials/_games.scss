@@ -1,0 +1,86 @@
+@use "./variables" as*;
+
+.ourGames {
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    font-size: xx-large;
+    justify-content: center;
+}
+
+
+.mechanophagia {
+    width: 50px;
+}
+
+.ritual {
+    height: 5%;
+}
+
+
+
+.card {
+    background-color: #111111;
+    color: rgb(88, 79, 68);
+    border-radius: 15px;
+    overflow: hidden;
+    
+
+    .card img {
+        border-radius: 15px;
+    }
+
+    p {
+        margin: 10px;
+        margin-bottom: 5px;
+    }
+
+}
+
+
+.btn {
+    background-color: $rosado;
+    border-color: $rosado;
+    color: $blanco;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background-color: #f3dbdb;
+        border-color: #f3dbdb;
+        color: $rosado;
+        
+        
+    }
+}
+
+.juegoUno {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.juegoDos {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/*
+.gamesCards {
+    margin-top: 90px;
+    margin-bottom: 400px;
+} */
+
+.gamesCards {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    margin-bottom: 50px;
+}

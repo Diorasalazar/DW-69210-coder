@@ -1,0 +1,26 @@
+$rosado: #FF7DAA;
+$negro: #111111;
+$blanco: #ffffff;
+$font1: "Jersey 25", sans-serif;
+$font2: "K2D", sans-serif;
+$font3: "Jockey One", sans-serif;
+
+.boton-rosado{
+    background-color: $rosado;
+    border-color: $rosado;
+    color: $blanco;
+}
+
+.boton-negro{
+    @extend .boton-rosado;
+    background-color: $negro;
+}
+
+
+
+
+
+@mixin jerseyblanco{
+    color: white;
+    font-family: "Jersey 25", sans-serif;
+}

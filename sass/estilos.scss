@@ -1,0 +1,67 @@
+
+@use "partials/variables" as*;
+@use "partials/header-footer";
+@use "partials/index";
+@use "partials/games";
+@use "partials/aboutus";
+@use "partials/contact";
+@use "partials/pitchus";
+
+
+/*Font*/
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Jersey+25&family=Maname&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Jersey+25&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Maname&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+@import 'animate.css';
+
+/*font-family: "Jersey 25", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+  font-family: "K2D", sans-serif;
+  font-weight: 400;
+  font-style: normal;*/
+
+/*Paleta de color
+  Rosa #FF7DAA
+  Negro grisáceo  rgb(17, 17, 17); #111111;
+
+  .jockey-one-regular {
+  font-family: "Jockey One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    background-color: $negro;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    font-family: "K2D", sans-serif;
+}
+
+h1, h2 {
+    @include jerseyblanco
+}
+
+ li {
+            list-style: none;
+        }
+
+main {
+    padding-bottom: 50px;
+    justify-content: center;
+}
+
