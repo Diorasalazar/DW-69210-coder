@@ -190,7 +190,7 @@
         }
 
         .logo-footer {
-            width: 20%;
+            width: 40%;
         }
         
         
@@ -338,11 +338,14 @@
             justify-content: center;
             flex-wrap: wrap;
         }
-        .desktop-footer {
-            display: none;
-        }
-        .responsive-footer {
-            display: flex;
+        
+        .logo-footer {
+            width: 12%;
+            position: absolute;
+            margin-top: 60px;
+            margin-left: 29%;
+            margin-bottom: 200px;
+            padding-bottom: 60px;
         }
         
     }
@@ -359,7 +362,7 @@
             "wilmar"
             "wichu"; 
 
-       margin-top: 0;
+      
     }
 
     .texto1 {
