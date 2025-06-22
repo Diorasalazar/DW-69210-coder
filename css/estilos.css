@@ -689,6 +689,7 @@ h1 {
   .aboutus-grid {
     grid-template-columns: 1fr;
     grid-template-areas: "titulo" "texto1" "wilmar" "wichu";
+    margin-top: 0;
   }
   .texto1 {
     padding: 0 15px;
