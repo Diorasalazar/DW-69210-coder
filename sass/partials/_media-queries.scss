@@ -11,9 +11,7 @@
         flex-direction: column;
         height: auto;
         align-items: flex-start;
-        position: relative;
-
-        
+        position: relative;       
         
     }
     .logo {
@@ -128,13 +126,7 @@
         }
     }
 
-    .gamesCards {
-        flex-direction: column;
-        gap: 30px;
-        margin-top: 40px;
-        margin-bottom: 30px;
-    }
-
+   
     .card {
         width: 90%;
     }
@@ -214,13 +206,14 @@
 
 @media (min-width: 576px) and (max-width: 767.98px) { 
     header {
+        
         flex-wrap: wrap;
         height: auto;
         padding: 10px;
         justify-content: center;
         .logo {
-            max-width: 160px; /* */
-            margin-bottom: 10px; /* */
+            max-width: 160px; 
+            margin-bottom: 10px; 
         }
         .social-media {
             margin-left: 0;
@@ -266,10 +259,7 @@
         }
     }
 
-    .gamesCards {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  
     .card {
         width: 45%;
     }
@@ -324,13 +314,8 @@
         width: 500px;
     }
 
-    .gamesCards {
-        justify-content: space-around;
-    }
-    .card {
-        width: 30%;
-    }
-
+    
+   
     footer {
         height: auto;
         padding: 10px;
@@ -406,6 +391,8 @@
 
 
 }
+
+/*GAMES*/
 
 
 /*CONTACT US*/

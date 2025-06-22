@@ -387,10 +387,53 @@ form .checkbox-group {
 }
 
 footer {
-  margin-top: 200px;
+  margin-top: 300px;
   padding: 10px;
 }
 
+/* Dispositivos medianos (tabletas, netbooks - entre 768px y 991px de ancho) */
+@media (max-width: 991px) {
+  .h1games {
+    text-align: center; /* Centrar el título "Our Games" */
+    margin-left: 0; /* Quitar el margen fijo izquierdo */
+  }
+  .gamesCards {
+    flex-direction: column; /* Apilar las cards verticalmente */
+    gap: 30px; /* Reducir el espacio entre cards */
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding: 0 20px; /* Añadir un poco de padding a los lados para que no se peguen a los bordes */
+  }
+  .card {
+    width: 80%; /* Las cards ocupan el 80% del ancho disponible */
+    max-width: 450px; /* Limitar el ancho máximo para que no se estiren demasiado en tabletas grandes */
+    margin: 0 auto; /* Centrar las cards individualmente en la columna */
+  }
+}
+/*GAMES*/
+/* Dispositivos pequeños (celulares - hasta 767px de ancho) */
+@media (max-width: 767px) {
+  .ourGames {
+    padding: 30px 15px; /* Reducir el padding general de la sección */
+  }
+  .h1games {
+    font-size: 2.5em; /* Reducir el tamaño de la fuente del título */
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+  .gamesCards {
+    gap: 20px; /* Espacio más pequeño entre cards en móviles */
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  .card {
+    width: 100%; /* Las cards ocupan todo el ancho disponible en celulares */
+    max-width: none; /* Eliminar el límite de ancho máximo */
+  }
+  .card p {
+    font-size: 100%; /* Asegurar que el texto dentro de la tarjeta sea legible */
+  }
+}
 .pitchmain {
   display: flex;
   flex-direction: column;
@@ -504,12 +547,6 @@ h1 {
   form input, form textarea {
     width: 95%;
   }
-  .gamesCards {
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 40px;
-    margin-bottom: 30px;
-  }
   .card {
     width: 90%;
   }
@@ -577,8 +614,8 @@ h1 {
     justify-content: center;
   }
   header .logo {
-    max-width: 160px; /* */
-    margin-bottom: 10px; /* */
+    max-width: 160px;
+    margin-bottom: 10px;
   }
   header .social-media {
     margin-left: 0;
@@ -615,10 +652,6 @@ h1 {
   }
   form input, form textarea {
     width: 90%;
-  }
-  .gamesCards {
-    flex-wrap: wrap;
-    justify-content: center;
   }
   .card {
     width: 45%;
@@ -661,12 +694,6 @@ h1 {
   }
   form {
     width: 500px;
-  }
-  .gamesCards {
-    justify-content: space-around;
-  }
-  .card {
-    width: 30%;
   }
   footer {
     height: auto;
@@ -721,6 +748,7 @@ h1 {
     width: 380px;
   }
 }
+/*GAMES*/
 /*CONTACT US*/
 /*font-family: "Jersey 25", sans-serif;
   font-weight: 400;
