@@ -17,7 +17,7 @@ main {
     
     h1 {
         color: $blanco;
-        font-size: 55px;
+        Font-size: 3em; 
         margin-bottom: 15px;         
         margin-top: 50px;
         grid-area: titulo;
@@ -56,31 +56,3 @@ main {
     }
 }
 
-/* Opcional: Responsive básico para pantallas pequeñas */
-@media (max-width: 768px) {
-    .aboutus-grid {
-        grid-template-columns: 1fr; /* En pantallas pequeñas, una sola columna */
-        grid-template-areas:
-            "titulo"
-            "texto1"
-            "wilmar"
-            "wichu"; // Reorganizamos las áreas para una sola columna
-    }
-
-    .texto1 {
-        padding: 0 15px; // Ajustamos el padding para pantallas pequeñas
-    }
-
-    .texto-aboutus p {
-        margin: 30px auto 0 auto; // Reducimos el margen superior y centramos
-        font-size: 150%; // Ajustamos el tamaño de fuente
-    }
-
-    .galeria-aboutus {
-        gap: 20px; // Reducimos el gap
-        margin-top: 30px; // Reducimos el margen superior
-        img {
-            height: 300px; // Reducimos la altura de las imágenes
-        }
-    }
-}
