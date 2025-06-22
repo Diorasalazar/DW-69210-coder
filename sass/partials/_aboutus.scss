@@ -1,89 +1,86 @@
 @use "./variables" as*;
 
-
-
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.aboutus1 {
-    color: $negro;
-}
-
-.aboutusp{
-    font-size: 200%;
-    font-family: "Jockey One", sans-serif;
-    margin-left: 10%;
-    margin-top: 60px;
-
-}
-
-.galeria {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 60px;
-    flex-wrap: wrap;
-}
-
-.galeria img{
-    width: 30%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-
-
-
-
-/*
-.contenedor-grid {
+.aboutus-grid {
     display: grid;
     grid-template-areas:
-        "titulo titulo"
-        "img1 texto1"
-        "img2 texto2";
+    "titulo titulo"
+    "texto1 wilmar"
+    "texto1 wichu";       
+    width: 80%; 
+    margin: 60px auto; 
+    
+    h1 {
+        color: $blanco;
+        font-size: 55px;
+        margin-bottom: 15px;         
+        margin-top: 50px;
+        grid-area: titulo;
+    }        
+}
 
 
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    gap: 50px;
-    justify-items: center;
-    max-width: 1200px;
 
-    img {
-        width: 65%;
-        height: 100%;
+.texto-aboutus p {
+    
+    max-width: 600px; 
+    font-size: 220%;
+    font-family: "Jockey One", sans-serif;
+    margin-top: 40px; 
+    text-align: center; 
+    text-justify:newspaper;
+} 
+
+.galeria-aboutus {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: left;
+    gap: 30px;
+    margin-top: 70px;
+    flex-wrap: wrap;  
+    
+    img { 
+        width: auto;
+        height: 330px;
         object-fit: cover;
         border-radius: 15px;
+        
+
+        
+    }
+}
+
+/* Opcional: Responsive básico para pantallas pequeñas */
+@media (max-width: 768px) {
+    .aboutus-grid {
+        grid-template-columns: 1fr; /* En pantallas pequeñas, una sola columna */
+        grid-template-areas:
+            "titulo"
+            "texto1"
+            "wilmar"
+            "wichu"; // Reorganizamos las áreas para una sola columna
     }
 
-    .grid-titulo-1 {
-        grid-area: titulo;
-        font-size: 50px;
+    .texto1 {
+        padding: 0 15px; // Ajustamos el padding para pantallas pequeñas
     }
 
-    .grid-texto-1 {
-        grid-area: texto1;
+    .texto-aboutus p {
+        margin: 30px auto 0 auto; // Reducimos el margen superior y centramos
+        font-size: 150%; // Ajustamos el tamaño de fuente
     }
 
-    .grid-img-1 {
-        grid-area: img1;
+    .galeria-aboutus {
+        gap: 20px; // Reducimos el gap
+        margin-top: 30px; // Reducimos el margen superior
+        img {
+            height: 300px; // Reducimos la altura de las imágenes
+        }
     }
-
-    .grid-texto-2 {
-        grid-area: texto2;
-    }
-
-    .grid-img-2 {
-        grid-area: img2;
-    }
-
-    .grid-img-3 {
-        grid-area: img3;
-    }
-}*/
+}

@@ -1,11 +1,12 @@
 
 @use "partials/variables" as*;
-@use "partials/header-footer";
-@use "partials/index";
-@use "partials/games";
-@use "partials/aboutus";
-@use "partials/contact";
-@use "partials/pitchus";
+@use "partials/header-footer" as*;
+@use "partials/index" as*;
+@use "partials/games" as*;
+@use "partials/aboutus" as*;
+@use "partials/contact" as*;
+@use "partials/pitchus" as*;
+@use "partials/media-queries" as*;
 
 
 /*Font*/
@@ -65,3 +66,10 @@ main {
     justify-content: center;
 }
 
+.desktop-footer {
+    display: flex; 
+}
+
+.responsive-footer {
+    display: none; 
+}

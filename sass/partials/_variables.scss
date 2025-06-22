@@ -1,4 +1,5 @@
 $rosado: #FF7DAA;
+$rosa-fuerte: #ff69b4;
 $negro: #111111;
 $blanco: #ffffff;
 $font1: "Jersey 25", sans-serif;
@@ -7,9 +8,28 @@ $font3: "Jockey One", sans-serif;
 
 .boton-rosado{
     background-color: $rosado;
-    border-color: $rosado;
+    border: none;
     color: $blanco;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 11px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+        
+
+
+    &:hover {
+        background-color: #f3dbdb;
+        border-color: #f3dbdb;
+        color: $negro;       
+        
+        
+    }
+    
 }
+
+
 
 .boton-negro{
     @extend .boton-rosado;

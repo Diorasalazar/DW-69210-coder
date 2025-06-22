@@ -4,10 +4,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Jersey+25&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Maname&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jockey+One&display=swap");
 @import 'animate.css';
-.boton-rosado, .boton-negro {
+.boton-rosado, .btnContact, .boton-negro {
   background-color: #FF7DAA;
-  border-color: #FF7DAA;
+  border: none;
   color: #ffffff;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 11px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.boton-rosado:hover, .btnContact:hover, .boton-negro:hover {
+  background-color: #f3dbdb;
+  border-color: #f3dbdb;
+  color: #111111;
 }
 
 .boton-negro {
@@ -25,30 +36,20 @@ header {
   height: 80px;
   padding: 0 10px;
   margin-top: 10px;
-  /*
-  @media (max-width: 767.98px) {
-      .logo {
-          max-width: 250px;
-      }
-  }
-  @media (min-width: 768px) {
-      .logo {
-          max-width: 350px;
-      }
-  }*/
 }
 header a {
   color: white;
   text-decoration: none;
 }
 header .logo {
-  max-width: 210px;
+  width: 50%;
   height: auto;
   /*margin: auto;*/
 }
 header .social-media {
   display: flex;
   align-items: center;
+  margin-right: 8%;
 }
 header .social-media img {
   width: 27px;
@@ -59,7 +60,7 @@ header .social-media ul {
   list-style: none;
   display: flex;
   padding: 0;
-  margin: 0;
+  margin-top: 18px;
 }
 header .social-media li {
   white-space: nowrap;
@@ -84,12 +85,12 @@ header nav li {
 }
 
 footer {
-  /*display: flex;
-  flex-direction: row;     
-  justify-content: space-around;*/
   align-items: baseline;
-  height: 50px;
+  height: auto;
   flex-wrap: wrap;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 10px;
 }
 footer ul {
   color: #ffffff;
@@ -98,8 +99,22 @@ footer ul {
   flex-direction: row;
   justify-content: space-between*/
 }
+footer ul li {
+  font-size: 16px;
+}
 footer p {
   margin: 8px;
+  font-size: 18px;
+}
+footer .logo-footer {
+  display: flex;
+}
+footer .social-media-footer {
+  display: none;
+}
+
+.responsive-footer {
+  display: none;
 }
 
 .contentIndex {
@@ -237,103 +252,146 @@ main {
   align-items: center;
 }
 
-.aboutus1 {
-  color: #111111;
+.aboutus-grid {
+  display: grid;
+  grid-template-areas: "titulo titulo" "texto1 wilmar" "texto1 wichu";
+  width: 80%;
+  margin: 60px auto;
+}
+.aboutus-grid h1 {
+  color: #ffffff;
+  font-size: 55px;
+  margin-bottom: 15px;
+  margin-top: 50px;
+  grid-area: titulo;
 }
 
-.aboutusp {
-  font-size: 200%;
+.texto-aboutus p {
+  max-width: 600px;
+  font-size: 220%;
   font-family: "Jockey One", sans-serif;
-  margin-left: 10%;
-  margin-top: 60px;
+  margin-top: 40px;
+  text-align: center;
+  text-justify: newspaper;
 }
 
-.galeria {
+.galeria-aboutus {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
   gap: 30px;
-  margin-top: 60px;
+  margin-top: 70px;
   flex-wrap: wrap;
 }
-
-.galeria img {
-  width: 30%;
-  height: 500px;
+.galeria-aboutus img {
+  width: auto;
+  height: 330px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px;
 }
 
-/*
-.contenedor-grid {
-    display: grid;
-    grid-template-areas:
-        "titulo titulo"
-        "img1 texto1"
-        "img2 texto2";
-
-
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    gap: 50px;
-    justify-items: center;
-    max-width: 1200px;
-
-    img {
-        width: 65%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 15px;
-    }
-
-    .grid-titulo-1 {
-        grid-area: titulo;
-        font-size: 50px;
-    }
-
-    .grid-texto-1 {
-        grid-area: texto1;
-    }
-
-    .grid-img-1 {
-        grid-area: img1;
-    }
-
-    .grid-texto-2 {
-        grid-area: texto2;
-    }
-
-    .grid-img-2 {
-        grid-area: img2;
-    }
-
-    .grid-img-3 {
-        grid-area: img3;
-    }
-}*/
+/* Opcional: Responsive básico para pantallas pequeñas */
+@media (max-width: 768px) {
+  .aboutus-grid {
+    grid-template-columns: 1fr; /* En pantallas pequeñas, una sola columna */
+    grid-template-areas: "titulo" "texto1" "wilmar" "wichu";
+  }
+  .texto1 {
+    padding: 0 15px;
+  }
+  .texto-aboutus p {
+    margin: 30px auto 0 auto;
+    font-size: 150%;
+  }
+  .galeria-aboutus {
+    gap: 20px;
+    margin-top: 30px;
+  }
+  .galeria-aboutus img {
+    height: 300px;
+  }
+}
 form {
   color: #f3dbdb;
   width: 350px;
-  margin: 20px auto;
-  padding: 20px;
+  margin: auto;
+  padding-left: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-radius: 5px;
   background-color: #000000;
-  font-size: 15px;
+  font-size: 17px;
+  box-sizing: border-box;
 }
-
-label {
+form label {
   display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+form input {
+  border-radius: 5px;
+  width: 87%;
+  height: 38px;
+  box-sizing: border-box;
+}
+form textarea {
+  width: 87%;
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+form .checkbox-group {
+  display: flex;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  align-items: center;
 }
 
-input {
-  border-radius: 5px;
-  width: 300px;
-  height: 30px;
+.checkbox-group p {
+  margin: 0;
+  padding: 0;
+  color: #f3dbdb;
+  font-size: 16px;
 }
 
-textarea {
-  width: 300px;
-  border-radius: 5px;
+.btnContact {
+  margin-bottom: 15px;
+}
+
+.checkbox {
+  width: 8%;
+  height: auto;
+  min-width: 15px;
+  min-height: 15px;
+  margin-right: 5px;
+  vertical-align: middle;
+  margin-left: 5%;
+}
+.checkbox input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3dbdb;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.checkbox input[type=checkbox]:checked {
+  background-color: #FF7DAA;
+  border-color: #FF7DAA;
+}
+.checkbox input[type=checkbox]:checked::after {
+  color: #111111;
+  font-size: 14px;
+  font-weight: bold;
+  content: "✓";
 }
 
 .pitchmain {
@@ -343,6 +401,325 @@ textarea {
   padding-bottom: 50px;
 }
 
+h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Media Queries */
+/* INDEX */
+@media (max-width: 575.98px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+    position: relative;
+  }
+  .logo {
+    max-width: 150px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+  }
+  .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+  .social-media {
+    margin-left: 0;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: right;
+    z-index: 1050;
+  }
+  nav .navbar-collapse {
+    width: -moz-min-content;
+    width: min-content;
+    max-width: calc(100vw - 40px);
+    position: absolute;
+    top: 0;
+    right: 40px;
+    background-color: #111111;
+    z-index: 1049;
+    padding-top: 80px;
+    padding-left: 3px;
+    padding-right: 20px;
+    white-space: nowrap;
+  }
+  nav .navbar-toggler {
+    position: relative;
+    z-index: 1051;
+    background-color: transparent;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  nav li {
+    margin: 5px 0;
+  }
+  .contentIndex {
+    margin: 5%;
+    margin-top: 10px;
+  }
+  .banner img {
+    width: 100%;
+  }
+  .welcome p {
+    font-size: 200%;
+  }
+  #carouselExample {
+    width: 90%;
+  }
+  .aboutusp {
+    width: 90%;
+    font-size: 150%;
+    margin-left: 5%;
+    margin-top: 30px;
+  }
+  .galeria {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  .galeria img {
+    width: 90%;
+    height: 300px;
+  }
+  form {
+    width: 90%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  form input, form textarea {
+    width: 95%;
+  }
+  .gamesCards {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+  .card {
+    width: 90%;
+  }
+  .ourGames {
+    padding: 30px;
+    font-size: large;
+  }
+  footer {
+    height: auto;
+    padding: 10px 0;
+    /*
+    .desktop-footer {
+        display: none;
+    }
+
+    .responsive-footer {
+        display: flex;
+    } */
+  }
+  footer p {
+    font-size: 17px;
+    text-align: center;
+    margin: 5px;
+  }
+  footer ul {
+    gap: 10%;
+    justify-content: center;
+  }
+  footer .social-media-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer .social-media-footer li {
+    width: 70%;
+    text-align: center;
+    margin: 5px 0;
+  }
+  footer .anexos-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+  footer .anexos-footer ul {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    gap: 10px 15px;
+  }
+  footer .logo-footer {
+    width: 20%;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+    justify-content: center;
+  }
+  header .logo {
+    max-width: 160px; /* */
+    margin-bottom: 10px; /* */
+  }
+  header .social-media {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  header nav {
+    width: 100%;
+  }
+  header nav ul {
+    justify-content: center;
+  }
+  .contentIndex {
+    margin: 7%;
+  }
+  .welcome p {
+    font-size: 250%;
+  }
+  #carouselExample {
+    width: 80%;
+  }
+  .aboutusp {
+    width: 60%;
+    font-size: 170%;
+    margin-left: 7%;
+  }
+  .galeria img {
+    width: 45%;
+    height: 400px;
+  }
+  form {
+    width: 70%;
+  }
+  form input, form textarea {
+    width: 90%;
+  }
+  .gamesCards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    width: 45%;
+  }
+  footer {
+    height: auto;
+    padding: 10px;
+  }
+  footer ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  footer .desktop-footer {
+    display: none;
+  }
+  footer .responsive-footer {
+    display: flex;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  header .logo {
+    max-width: 200px;
+  }
+  header nav {
+    font-size: large;
+  }
+  .contentIndex {
+    margin: 8%;
+  }
+  #carouselExample {
+    width: 75%;
+  }
+  .aboutusp {
+    width: 45%;
+    font-size: 180%;
+  }
+  .galeria img {
+    width: 30%;
+    height: 450px;
+  }
+  form {
+    width: 500px;
+  }
+  .gamesCards {
+    justify-content: space-around;
+  }
+  .card {
+    width: 30%;
+  }
+  footer {
+    height: auto;
+    padding: 10px;
+  }
+  footer ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  footer .desktop-footer {
+    display: none;
+  }
+  footer .responsive-footer {
+    display: flex;
+  }
+}
+/* ABOUT US */
+@media (max-width: 768px) {
+  .aboutus-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "titulo" "texto1" "wilmar" "wichu";
+  }
+  .texto1 {
+    padding: 0 15px;
+  }
+  .texto-aboutus p {
+    margin: 30px auto 0 auto;
+    font-size: 150%;
+  }
+  .galeria-aboutus {
+    gap: 20px;
+    margin-top: 30px;
+  }
+  .galeria-aboutus img {
+    height: 300px;
+  }
+}
+/* PITCH US */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 230%;
+    margin-top: 40px;
+  }
+  p {
+    font-size: 130%;
+    justify-content: center;
+    margin: 0 20px 0 40px;
+  }
+  form {
+    width: 380px;
+  }
+}
 /*font-family: "Jersey 25", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -385,4 +762,12 @@ li {
 main {
   padding-bottom: 50px;
   justify-content: center;
+}
+
+.desktop-footer {
+  display: flex;
+}
+
+.responsive-footer {
+  display: none;
 }/*# sourceMappingURL=estilos.css.map */

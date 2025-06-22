@@ -4,27 +4,90 @@
 form {
     color: #f3dbdb;
     width: 350px;
-    margin: 20px auto;
-    padding: 20px;
+    margin: auto;
+    padding-left: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-radius: 5px;
     background-color: #000000;
-    font-size: 15px;
+    font-size: 17px;
+    box-sizing: border-box;
+
+
+    label {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    input {
+        border-radius: 5px;
+        width: 87%;
+        height: 38px;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        width: 87%;
+        border-radius: 5px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .checkbox-group {
+        display: flex;
+        margin-bottom: 15px;
+        margin-top: 10px;
+        align-items: center;
+    }
+
+
 }
 
+.checkbox-group p {
+    margin: 0;
+    padding: 0;
+    color: #f3dbdb;
+    font-size: 16px;
 
-label {
-    display: block;
 }
 
-input {
-    border-radius: 5px;
-    width: 300px;
-    height: 30px;
+.btnContact {
+    @extend .boton-rosado;
+    margin-bottom: 15px;
 }
 
+.checkbox {
+    width: 8%;
+    height: auto;
+    min-width: 15px;
+    min-height: 15px;
+    margin-right: 5px;
+    vertical-align: middle;
+    margin-left: 5%;
 
-textarea {
-    width: 300px;
-    border-radius: 5px;
+    input[type="checkbox"] {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #f3dbdb;
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    input[type="checkbox"]:checked {
+        background-color: $rosado; border-color: $rosado;
+    }
+
+    input[type="checkbox"]:checked::after {
+        color: $negro;
+        font-size: 14px;
+        font-weight: bold;
+        content: '\2713';
+    }
+
 }
-
